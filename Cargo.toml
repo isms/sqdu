@@ -1,0 +1,23 @@
+[package]
+name = "sqdu"
+version = "0.1.0"
+edition = "2021"
+
+# Only ship what is needed; exclude dev assets like the assets/ directory from published crate
+include = [
+  "src/**",
+  "Cargo.toml",
+  "README.md",
+  "LICENSE*"
+]
+
+[features]
+default = []
+dev-assets = []
+
+[dependencies]
+rusqlite = "0.32"
+ratatui = "0.29"
+crossterm = "0.28"
+anyhow = "1.0"
+syntect = "5.2"
